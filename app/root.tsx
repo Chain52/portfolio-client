@@ -4,22 +4,37 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
+  ScrollRestoration
 } from "react-router";
 
 import type { Route } from "./+types/root";
-import "./app.css";
+import tailwindcss from "./app.css?url";
+import { Flex } from "./components/element";
+import { Navbar } from "./components/navigation";
+import { useContainerDimensions } from "./hooks/useContainerDimensions";
+import { RootContextProvider } from "./contexts";
 
-export function Layout({ children }: { children: React.ReactNode }) {
+export const links: Route.LinksFunction = () => [
+  { rel: "stylesheet", href: tailwindcss }
+];
+const ROOT_TITLE = "Colin Hain | Portfolio";
+
+export function Layout({ children }: React.PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning={true} className="h-full">
       <head>
+        <title>{ROOT_TITLE}</title>
+        <meta property="og:title" content={ROOT_TITLE} />
+        <meta
+          name="description"
+          content="Development portfolio for Colin Hain"
+        />
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="flex h-full">
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -29,7 +44,14 @@ export function Layout({ children }: { children: React.ReactNode }) {
 }
 
 export default function App() {
-  return <Outlet />;
+  return (
+    <Flex column className="overflow-hidden">
+      <Navbar />
+      <RootContextProvider>
+        <Outlet />
+      </RootContextProvider>
+    </Flex>
+  );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
