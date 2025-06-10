@@ -1,5 +1,5 @@
-import AboutMe from "./AboutMe";
-import Hero from "./Hero";
-import ContactMe from "./ContactMe";
+import Projects from "./Projects";
+import About from "./About";
+import Contact from "./Contact";
 
-export {AboutMe, Hero, ContactMe}
+export { Projects, About, Contact };

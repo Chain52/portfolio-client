@@ -1,63 +1,33 @@
-import React from "react";
-import { NavLink as ReactRouterNavLink } from "react-router";
+import React from 'react';
 
-import { ROUTE_DEFINITIONS, RouteType } from "~/routes";
-import { Flex } from "~/components/element";
-import clsx from "clsx";
-
-const ProfileWidget = () => {
-  return (
-    <div className="bg-gray-500 rounded-full w-12 h-12 place-items-center grid text-2xl">
-      G
-    </div>
-  );
-};
-
-interface NavLinkProps {
-  name: string;
-  path?: string;
-}
-
-const NavLink = ({ name, path = "" }: NavLinkProps) => {
-  return (
-    <ReactRouterNavLink
-      to={`/${path}`}
-      className={({ isActive }) => clsx(isActive && "border-b", "flex")}
-    >
-      <Flex column align="center">
-        <Flex grow shrink align="center">
-          <span className="text-lg">{name}</span>
-        </Flex>
-      </Flex>
-    </ReactRouterNavLink>
-  );
-};
+import { Flex } from '../element';
+import JumpLink from './JumpLink';
 
 const NavItems = () => {
   return (
-    <>
+    <Flex
+      grow
+      justify="between"
+      align="center"
+      className="max-w-7xl mx-auto px-4 py-3"
+    >
+      <JumpLink
+        anchor="about"
+        name="Colin Hain"
+        className="font-bold text-xl"
+      />
       <Flex grow justify="center">
-        {ROUTE_DEFINITIONS.map(
-          (route) =>
-            route.path !== "api" && (
-              <NavLink
-                key={route.path}
-                name={route.name}
-                path={route.type !== RouteType.Index ? route.path : undefined}
-              />
-            )
-        )}
+        <JumpLink anchor="about" name="About" />
+        <JumpLink anchor="projects" name="Projects" />
+        <JumpLink anchor="contact" name="Contact" />
       </Flex>
-      <Flex initial justify="end">
-        <ProfileWidget />
-      </Flex>
-    </>
+    </Flex>
   );
 };
 
 export default function Navbar() {
   return (
-    <Flex initial className="p-2">
+    <Flex as="nav" id="top" className="w-full fixed z-10 top-0 bg-white shadow">
       <NavItems />
     </Flex>
   );

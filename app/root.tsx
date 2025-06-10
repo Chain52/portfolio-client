@@ -5,23 +5,21 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration
-} from "react-router";
+} from 'react-router';
 
-import type { Route } from "./+types/root";
-import tailwindcss from "./app.css?url";
-import { Flex } from "./components/element";
-import { Navbar } from "./components/navigation";
-import { useContainerDimensions } from "./hooks/useContainerDimensions";
-import { RootContextProvider } from "./contexts";
+import { Navbar, Flex } from '~/components';
+
+import type { Route } from './+types/root';
+import tailwindcss from './app.css?url';
 
 export const links: Route.LinksFunction = () => [
-  { rel: "stylesheet", href: tailwindcss }
+  { rel: 'stylesheet', href: tailwindcss }
 ];
-const ROOT_TITLE = "Colin Hain | Portfolio";
+const ROOT_TITLE = 'Colin Hain | Portfolio';
 
 export function Layout({ children }: React.PropsWithChildren) {
   return (
-    <html lang="en" suppressHydrationWarning={true} className="h-full">
+    <html lang="en" suppressHydrationWarning={true} className="scroll-smooth">
       <head>
         <title>{ROOT_TITLE}</title>
         <meta property="og:title" content={ROOT_TITLE} />
@@ -34,7 +32,7 @@ export function Layout({ children }: React.PropsWithChildren) {
         <Meta />
         <Links />
       </head>
-      <body className="flex h-full">
+      <body>
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -45,25 +43,23 @@ export function Layout({ children }: React.PropsWithChildren) {
 
 export default function App() {
   return (
-    <Flex column className="overflow-hidden">
+    <Flex className="min-h-screen">
       <Navbar />
-      <RootContextProvider>
-        <Outlet />
-      </RootContextProvider>
+      <Outlet />
     </Flex>
   );
 }
 
 export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
-  let message = "Oops!";
-  let details = "An unexpected error occurred.";
+  let message = 'Oops!';
+  let details = 'An unexpected error occurred.';
   let stack: string | undefined;
 
   if (isRouteErrorResponse(error)) {
-    message = error.status === 404 ? "404" : "Error";
+    message = error.status === 404 ? '404' : 'Error';
     details =
       error.status === 404
-        ? "The requested page could not be found."
+        ? 'The requested page could not be found.'
         : error.statusText || details;
   } else if (import.meta.env.DEV && error && error instanceof Error) {
     details = error.message;

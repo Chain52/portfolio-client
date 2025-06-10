@@ -1,5 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { debounce } from "~/utils";
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 
 export function useContainerDimensions<T extends HTMLElement>() {
   const containerRef = useRef<T>(null);
@@ -14,7 +13,7 @@ export function useContainerDimensions<T extends HTMLElement>() {
   }, [containerRef.current]);
 
   const observer = useMemo(() => {
-    if (typeof window === "undefined") {
+    if (typeof window === 'undefined') {
       return;
     }
     return new ResizeObserver(() => {

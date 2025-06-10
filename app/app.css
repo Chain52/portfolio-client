@@ -1,1 +1,6 @@
 @import "tailwindcss";
+@source inline('{sm:,md:,lg:,xl:,2xl:,}flex-{row,col,row-reverse,col-reverse,wrap,nowrap,wrap-reverse,{1..5..1}}');
+@source inline('{sm:,md:,lg:,xl:,2xl:,}grow-{0..5..1}');
+@source inline('{sm:,md:,lg:,xl:,2xl:,}shrink-{0..5..1}');
+@source inline('{sm:,md:,lg:,xl:,2xl:,}justify-{start,center,end,between,around,evenly,stretch}');
+@source inline('{sm:,md:,lg:,xl:,2xl:,}items-{start,center,end,baseline,stretch}');
