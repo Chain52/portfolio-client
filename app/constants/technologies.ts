@@ -97,6 +97,13 @@ export const Technologies = Object.freeze({
   Figma: {
     icon: 'logos:figma',
     name: 'Figma'
+  },
+  GitHub: {
+    icon: {
+      light: 'simple-icons:github',
+      dark: 'logos:github'
+    },
+    name: 'GitHub'
   }
 });
 export type Technologies = Record<keyof typeof Technologies, Technology>;

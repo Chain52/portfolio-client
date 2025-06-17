@@ -1,10 +1,8 @@
 import React from 'react';
-import clsx from 'clsx';
 import { Icon } from '@iconify/react';
 
 import { Flex } from '../element';
 import { Technologies, type Technology } from '~/constants';
-import { useContainerDimensions } from '~/hooks/useContainerDimensions';
 
 interface ProjectCardProps extends React.PropsWithChildren {
   id: string;
@@ -66,23 +64,8 @@ const ProjectCard = ({
 
 export default function Projects() {
   return (
-    <Flex
-      as="section"
-      id="projects"
-      direction="col"
-      className="scroll-mt-24 gap-1"
-    >
-      <Flex align="baseline" justify="between" className="gap-4">
-        <h2 className="mb-4 text-3xl font-bold">Projects</h2>
-        <a
-          href="https://github.com/Chain52"
-          target="_blank"
-          className="flex items-center gap-2 rounded-full bg-blue-600 px-4 py-3 text-lg font-medium text-white hover:bg-blue-700"
-        >
-          <Icon icon="simple-icons:github" className="text-2xl" />
-          <span>GitHub</span>
-        </a>
-      </Flex>
+    <Flex as="section" id="projects" direction="col" className="scroll-mt-24">
+      <h2 className="mb-4 text-3xl font-bold">Projects</h2>
       <Flex direction="col" className="gap-4 sm:mx-8">
         <ProjectCard
           id="ikbp"
@@ -102,7 +85,7 @@ export default function Projects() {
           ]}
           className=""
         >
-          <Flex direction="col" className="gap-2">
+          <Flex direction="col" className="gap-4">
             <Flex direction="col">
               <h4 className="text-sm font-black text-gray-500">SUMMARY</h4>
               <Flex className="px-2">
@@ -115,7 +98,7 @@ export default function Projects() {
             </Flex>
             <Flex direction="col">
               <h4 className="text-sm font-black text-gray-500">DETAILS</h4>
-              <Flex direction="col" className="gap-2 px-2">
+              <Flex direction="col" className="gap-3 px-2">
                 <p>
                   Worked cross-functionally with UX designer to prototype the
                   platform for stakeholder approval in Figma.
@@ -166,7 +149,7 @@ export default function Projects() {
             ]}
             className="sm:flex-1"
           >
-            <Flex direction="col" className="gap-2">
+            <Flex direction="col" className="gap-4">
               <Flex direction="col">
                 <h4 className="text-sm font-black text-gray-500">SUMMARY</h4>
                 <Flex className="px-2">
@@ -180,7 +163,7 @@ export default function Projects() {
               </Flex>
               <Flex direction="col">
                 <h4 className="text-sm font-black text-gray-500">DETAILS</h4>
-                <Flex direction="col" className="gap-2 px-2">
+                <Flex direction="col" className="gap-3 px-2">
                   <p>
                     Integrated Twilio to handle dynamic, personalized email and
                     SMS communication. Deployed each operation as an isolated
@@ -215,7 +198,7 @@ export default function Projects() {
             technologies={[Technologies.Salesforce, Technologies.LWC]}
             className="sm:flex-1"
           >
-            <Flex direction="col" className="gap-2">
+            <Flex direction="col" className="gap-4">
               <Flex direction="col">
                 <h4 className="text-sm font-black text-gray-500">SUMMARY</h4>
                 <Flex direction="col" className="px-2">
@@ -228,7 +211,7 @@ export default function Projects() {
               </Flex>
               <Flex direction="col">
                 <h4 className="text-sm font-black text-gray-500">DETAILS</h4>
-                <Flex direction="col" className="gap-2 px-2">
+                <Flex direction="col" className="gap-3 px-2">
                   <p>
                     Utilized TTD to restructure the entire codebase to replace
                     bad testing practices and implement reusability amongst
@@ -255,6 +238,25 @@ export default function Projects() {
               </Flex>
             </Flex>
           </ProjectCard>
+        </Flex>
+        <Flex direction="col" className="gap-3">
+          <p className="italic">
+            Note: These project overviews describe proprietary systems I
+            contributed to in professional settings. Their source code is not
+            publicly available.
+          </p>
+          <p className="inline">
+            You can explore older and experimental public projects on my{' '}
+            <a
+              href="https://github.com/Chain52"
+              target="_blank"
+              className="text-blue-600 hover:text-blue-700 hover:underline"
+            >
+              GitHub
+              <Icon icon="mdi:external-link" className="mb-3 inline text-sm" />
+            </a>
+            .
+          </p>
         </Flex>
       </Flex>
     </Flex>
