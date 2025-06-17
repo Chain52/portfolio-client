@@ -11,29 +11,44 @@ export default function About() {
       direction={{ base: 'col', sm: 'row' }}
       justify={{ sm: 'between' }}
       align="center"
-      className="scroll-mt-24"
+      className="scroll-mt-24 sm:gap-4 sm:divide-x sm:divide-gray-300"
     >
-      <Flex direction="col">
+      <Flex
+        grow={{ sm: true }}
+        direction="col"
+        align="center"
+        justify="center"
+        className="h-full"
+      >
         <h1 className="text-5xl font-bold">Hi, I'm Colin Hain</h1>
-        <h3 className="text-3xl font-medium">A TypeScript Developer</h3>
+        <h3 className="text-3xl font-medium">A Full-Stack Developer</h3>
       </Flex>
       <Flex direction="col" className="gap-4">
-        <Flex direction="col" className="max-w-prose text-lg gap-4">
+        <Flex direction="col" className="max-w-prose gap-4 text-lg/relaxed">
           <p>
-            I'm a developer who builds fast, responsive interfaces with React
-            and TypeScript. I focus on clarity throughout every layer of the
-            stack.
+            I'm a full-stack developer who builds internal tools, scalable
+            systems, and cloud-native applications using React, TypeScript,
+            Node.js, and AWS.
           </p>
           <p>
-            My background in QA, project coordination, and internal platform
-            tooling shaped how I think about testing, delivery, and
-            architecture. I bring a backend-aware mindset and hands-on
-            experience with APIs, AWS infrastructure, and cross-team delivery.
+            My career began in QA and IT support, evolved through self-directed
+            development, and now spans frontend interfaces, serverless backends,
+            platform refactors, and infrastructure automation. I've contributed
+            to enterprise platforms used by hundreds and built systems that
+            replaced brittle legacy code with maintainable, modern
+            architectures.
           </p>
           <p>
-            I thrive where complexity and clarity intersect, whether I'm
-            designing internal tools, refining UX flows, or writing maintainable
-            code that scales in production.
+            I focus on developer experience, performance, and clear system
+            design—whether I'm shipping features, debugging distributed systems,
+            or translating messy workflows into usable platforms.
+          </p>
+          <p>
+            In the Projects section, I've highlighted three proprietary
+            enterprise systems I helped build, detailing the architecture,
+            challenges, and real-world outcomes. You'll also find personal
+            explorations and prototypes on GitHub, with more updates coming soon
+            as I continue to evolve this space.
           </p>
         </Flex>
         <Flex direction="col" className="px-4">
@@ -46,7 +61,7 @@ export default function About() {
               name="Let's Work Together"
               variant="cta"
             />
-            <JumpLink anchor="projects" name="View My Work" variant="cta" />
+            <JumpLink anchor="projects" name="Browse Projects" variant="cta" />
           </Flex>
           {/* <span>LinkedIn, GitHub, etc.</span> */}
         </Flex>

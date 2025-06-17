@@ -13,7 +13,33 @@ import type { Route } from './+types/root';
 import tailwindcss from './app.css?url';
 
 export const links: Route.LinksFunction = () => [
-  { rel: 'stylesheet', href: tailwindcss }
+  { rel: 'stylesheet', href: tailwindcss },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '192x192',
+    href: '/android-chrome-192x192.png'
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '512x512',
+    href: '/android-chrome-512x512.png'
+  },
+  { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '16x16',
+    href: '/favicon-16x16.png'
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    sizes: '32x32',
+    href: '/favicon-32x32.png'
+  },
+  { rel: 'manifest', href: '/site.webmanifest' }
 ];
 const ROOT_TITLE = 'Colin Hain | Portfolio';
 
@@ -67,11 +93,11 @@ export function ErrorBoundary({ error }: Route.ErrorBoundaryProps) {
   }
 
   return (
-    <main className="pt-16 p-4 container mx-auto">
+    <main className="container mx-auto p-4 pt-16">
       <h1>{message}</h1>
       <p>{details}</p>
       {stack && (
-        <pre className="w-full p-4 overflow-x-auto">
+        <pre className="w-full overflow-x-auto p-4">
           <code>{stack}</code>
         </pre>
       )}

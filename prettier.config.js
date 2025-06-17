@@ -10,5 +10,6 @@ export default {
   bracketSpacing: true,
   arrowParens: 'always',
   semi: true,
-  singleQuote: true
+  singleQuote: true,
+  plugins: ['prettier-plugin-tailwindcss']
 };

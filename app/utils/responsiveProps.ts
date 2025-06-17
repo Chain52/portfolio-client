@@ -6,13 +6,17 @@ export type ResponsiveProp<T> = T | { [key in TailwindBreakpoint]?: T };
 export const resolveResponsiveProp = <T>(
   prop: ResponsiveProp<T> | undefined,
   prefix: string,
-  isValid: (value: T) => boolean = () => true
+  isValid: (value: T) => boolean = () => true,
+  booleanHandler?: (value: T) => string
 ) => {
   if (!prop) return [];
-  const result = (value: T) =>
-    typeof value === 'boolean'
-      ? `${prefix}-${value ? 1 : 0}`
-      : `${prefix}-${value}`;
+  const result = (value: T) => {
+    if (typeof value === 'boolean') {
+      if (booleanHandler) return booleanHandler(value);
+      return `${prefix}-${value ? 1 : 0}`;
+    }
+    return `${prefix}-${value}`;
+  };
 
   if (typeof prop !== 'object') {
     invariant(
