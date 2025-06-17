@@ -11,7 +11,7 @@ export default function About() {
       direction={{ base: 'col', sm: 'row' }}
       justify={{ sm: 'between' }}
       align="center"
-      className="scroll-mt-24 sm:gap-4 sm:divide-x sm:divide-gray-300"
+      className="scroll-mt-24 sm:gap-4 sm:divide-x"
     >
       <Flex
         grow={{ sm: true }}

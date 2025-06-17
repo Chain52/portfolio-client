@@ -6,3 +6,13 @@
 @source inline('{sm:,md:,lg:,xl:,2xl:,}shrink');
 @source inline('{sm:,md:,lg:,xl:,2xl:,}justify-{start,center,end,between,around,evenly,stretch}');
 @source inline('{sm:,md:,lg:,xl:,2xl:,}items-{start,center,end,baseline,stretch}');
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-400, currentColor);
+  }
+}

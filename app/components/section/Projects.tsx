@@ -20,7 +20,7 @@ const ProjectCard = ({
 }: ProjectCardProps) => {
   return (
     <Flex direction="col" className={className}>
-      <Flex direction="col" className="rounded-lg border">
+      <Flex direction="col" className="rounded-lg border shadow">
         <Flex justify="center" align="baseline" className="border-b px-2 py-3">
           <h3 className="text-center text-3xl font-semibold">{title}</h3>
         </Flex>
@@ -87,7 +87,7 @@ export default function Projects() {
         >
           <Flex direction="col" className="gap-4">
             <Flex direction="col">
-              <h4 className="text-sm font-black text-gray-500">SUMMARY</h4>
+              <h4 className="text-sm font-bold text-gray-600">SUMMARY</h4>
               <Flex className="px-2">
                 <p>
                   Solely Developed a modern internal knowledge base used by over
@@ -97,7 +97,7 @@ export default function Projects() {
               </Flex>
             </Flex>
             <Flex direction="col">
-              <h4 className="text-sm font-black text-gray-500">DETAILS</h4>
+              <h4 className="text-sm font-bold text-gray-600">DETAILS</h4>
               <Flex direction="col" className="gap-3 px-2">
                 <p>
                   Worked cross-functionally with UX designer to prototype the
@@ -121,7 +121,7 @@ export default function Projects() {
               </Flex>
             </Flex>
             <Flex direction="col">
-              <h4 className="text-sm font-black text-gray-500">RECEPTION</h4>
+              <h4 className="text-sm font-bold text-gray-600">RECEPTION</h4>
               <Flex className="px-2">
                 <p>
                   Content managers experienced a drastic boost in productivity,
@@ -151,7 +151,7 @@ export default function Projects() {
           >
             <Flex direction="col" className="gap-4">
               <Flex direction="col">
-                <h4 className="text-sm font-black text-gray-500">SUMMARY</h4>
+                <h4 className="text-sm font-bold text-gray-600">SUMMARY</h4>
                 <Flex className="px-2">
                   <p>
                     Collaborated with developers and architects on a serverless
@@ -162,7 +162,7 @@ export default function Projects() {
                 </Flex>
               </Flex>
               <Flex direction="col">
-                <h4 className="text-sm font-black text-gray-500">DETAILS</h4>
+                <h4 className="text-sm font-bold text-gray-600">DETAILS</h4>
                 <Flex direction="col" className="gap-3 px-2">
                   <p>
                     Integrated Twilio to handle dynamic, personalized email and
@@ -180,7 +180,7 @@ export default function Projects() {
                 </Flex>
               </Flex>
               <Flex direction="col">
-                <h4 className="text-sm font-black text-gray-500">RECEPTION</h4>
+                <h4 className="text-sm font-bold text-gray-600">RECEPTION</h4>
                 <Flex className="px-2">
                   <p>
                     Through my contributions to the UX prototype, the app's
@@ -200,7 +200,7 @@ export default function Projects() {
           >
             <Flex direction="col" className="gap-4">
               <Flex direction="col">
-                <h4 className="text-sm font-black text-gray-500">SUMMARY</h4>
+                <h4 className="text-sm font-bold text-gray-600">SUMMARY</h4>
                 <Flex direction="col" className="px-2">
                   <p>
                     Redesigned a legacy Salesforce codebase by introducing the
@@ -210,7 +210,7 @@ export default function Projects() {
                 </Flex>
               </Flex>
               <Flex direction="col">
-                <h4 className="text-sm font-black text-gray-500">DETAILS</h4>
+                <h4 className="text-sm font-bold text-gray-600">DETAILS</h4>
                 <Flex direction="col" className="gap-3 px-2">
                   <p>
                     Utilized TTD to restructure the entire codebase to replace
@@ -227,7 +227,7 @@ export default function Projects() {
                 </Flex>
               </Flex>
               <Flex direction="col">
-                <h4 className="text-sm font-black text-gray-500">RECEPTION</h4>
+                <h4 className="text-sm font-bold text-gray-600">RECEPTION</h4>
                 <Flex className="px-2">
                   <p>
                     The refactor transformed the Salesforce environment from an
