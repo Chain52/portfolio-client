@@ -8,63 +8,51 @@ export default function About() {
     <Flex
       as="section"
       id="about"
-      direction={{ base: 'col', sm: 'row' }}
-      justify={{ sm: 'between' }}
+      direction="col"
       align="center"
-      className="scroll-mt-24 sm:gap-4 sm:divide-x"
+      className="scroll-mt-24 gap-4 text-justify"
     >
       <Flex
-        grow={{ sm: true }}
         direction="col"
         align="center"
         justify="center"
-        className="h-full"
+        className="min-h-32 gap-2"
       >
-        <h1 className="text-5xl font-bold">Hi, I'm Colin Hain</h1>
+        <h1 className="text-4xl font-bold">Hi, I'm Colin Hain</h1>
         <h3 className="text-3xl font-medium">A Full-Stack Developer</h3>
       </Flex>
-      <Flex direction="col" className="gap-4">
-        <Flex direction="col" className="max-w-prose gap-4 text-lg/relaxed">
-          <p>
-            I'm a full-stack developer who builds internal tools, scalable
-            systems, and cloud-native applications using React, TypeScript,
-            Node.js, and AWS.
-          </p>
-          <p>
-            My career began in QA and IT support, evolved through self-directed
-            development, and now spans frontend interfaces, serverless backends,
-            platform refactors, and infrastructure automation. I've contributed
-            to enterprise platforms used by hundreds and built systems that
-            replaced brittle legacy code with maintainable, modern
-            architectures.
-          </p>
-          <p>
-            I focus on developer experience, performance, and clear system
-            design—whether I'm shipping features, debugging distributed systems,
-            or translating messy workflows into usable platforms.
-          </p>
-          <p>
-            In the Projects section, I've highlighted three proprietary
-            enterprise systems I helped build, detailing the architecture,
-            challenges, and real-world outcomes. You'll also find personal
-            explorations and prototypes on GitHub, with more updates coming soon
-            as I continue to evolve this space.
-          </p>
-        </Flex>
-        <Flex direction="col" className="px-4">
-          <Flex
-            direction={{ base: 'col', sm: 'row' }}
-            className="gap-2 sm:gap-4"
-          >
-            <JumpLink
-              anchor="contact"
-              name="Let's Work Together"
-              variant="cta"
-            />
-            <JumpLink anchor="projects" name="Browse Projects" variant="cta" />
-          </Flex>
-          {/* <span>LinkedIn, GitHub, etc.</span> */}
-        </Flex>
+      <Flex direction="col" className="max-w-prose gap-4 text-lg/relaxed">
+        <p>
+          Experienced in building scalable, cloud-native applications and
+          internal tools with React, TypeScript, Node.js, and AWS. My background
+          in development-adjacent roles has led me to specialize in transforming
+          complex challenges into maintainable, modern architectures and
+          high-impact solutions from a unique perspective. I prioritize
+          developer experience, system performance, and clear design,
+          consistently delivering resilient platforms that replace brittle
+          legacy systems and streamline critical workflows. Explore my work
+          below to see how I architect, develop, and optimize enterprise
+          systems.
+        </p>
+      </Flex>
+      <Flex
+        direction={{ base: 'col', sm: 'row' }}
+        justify="center"
+        align="center"
+        className="w-full gap-2 px-8 sm:gap-4"
+      >
+        <JumpLink
+          anchor="contact"
+          name="Let's Work Together"
+          variant="cta"
+          className="w-full max-w-64 font-medium"
+        />
+        <JumpLink
+          anchor="projects"
+          name="Browse Projects"
+          variant="cta"
+          className="w-full max-w-64 font-medium"
+        />
       </Flex>
     </Flex>
   );

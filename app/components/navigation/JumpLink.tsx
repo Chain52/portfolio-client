@@ -4,10 +4,12 @@ import { Link } from 'react-router';
 import clsx from 'clsx';
 
 import { Flex } from '../element';
+import type { TailwindBreakpoint } from '~/constants';
 
 interface JumpLinkProps extends React.PropsWithChildren {
   anchor: string;
   name: string;
+  textBreakpoint?: TailwindBreakpoint;
   variant?: 'navbar' | 'cta';
   className?: string;
 }
@@ -15,6 +17,7 @@ interface JumpLinkProps extends React.PropsWithChildren {
 export default function JumpLink({
   anchor,
   name,
+  textBreakpoint,
   variant = 'navbar',
   className = 'font-medium',
   children
@@ -28,10 +31,17 @@ export default function JumpLink({
         className
       )}
     >
-      <Flex direction="col" align="center" className="px-2">
-        <Flex grow shrink align="center" className="gap-2">
+      <Flex direction="col" grow shrink align="center" className="px-2">
+        <Flex align="center" className="gap-2">
           {children}
-          <span className="text-nowrap">{name}</span>
+          <span
+            className={clsx(
+              'text-nowrap',
+              textBreakpoint && `${textBreakpoint}:block hidden`
+            )}
+          >
+            {name}
+          </span>
         </Flex>
       </Flex>
     </Link>

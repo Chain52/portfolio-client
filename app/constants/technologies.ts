@@ -62,6 +62,14 @@ export const Technologies = Object.freeze({
     icon: 'logos:aws-lambda',
     name: 'AWS Lambda'
   },
+  CodePipeline: {
+    icon: 'logos:aws-codepipeline',
+    name: 'AWS CodePipeline'
+  },
+  CodeBuild: {
+    icon: 'logos:aws-codebuild',
+    name: 'AWS CodeBuild'
+  },
   Docker: {
     icon: 'logos:docker-icon',
     name: 'Docker'

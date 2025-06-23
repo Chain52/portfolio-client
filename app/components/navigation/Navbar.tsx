@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Flex } from '../element';
 import JumpLink from './JumpLink';
+import { Icon } from '@iconify/react/dist/iconify.js';
 
 const NavItems = () => {
   return (
@@ -15,6 +16,7 @@ const NavItems = () => {
         <JumpLink
           anchor="about"
           name="Colin Hain"
+          textBreakpoint="sm"
           className="text-xl font-bold"
         >
           <img src="/favicon-32x32.png" className="h-8 w-8" />
@@ -24,6 +26,24 @@ const NavItems = () => {
         <JumpLink anchor="about" name="About" className="text-lg" />
         <JumpLink anchor="projects" name="Projects" className="text-lg" />
         <JumpLink anchor="contact" name="Contact" className="text-lg" />
+      </Flex>
+      <Flex className="right-0 gap-1 sm:absolute">
+        <a href="mailto:colinphain@gamil.com" title="Email Me">
+          <Icon
+            icon="mdi:email-outline"
+            className="text-3xl text-[#4444bb] hover:text-blue-900"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/colin-hain"
+          target="_blank"
+          title="Connect on LinkedIn"
+        >
+          <Icon
+            icon="mdi:linkedin"
+            className="text-3xl text-[#4444bb] hover:text-blue-900"
+          />
+        </a>
       </Flex>
     </Flex>
   );
