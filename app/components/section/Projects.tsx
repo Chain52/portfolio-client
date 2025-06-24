@@ -3,13 +3,14 @@ import { Icon } from '@iconify/react';
 
 import { Flex } from '../element';
 import { ProjectDetails, Technologies, type Technology } from '~/constants';
+import Markdown from 'react-markdown';
 
 interface ProjectCardProps {
   id: string;
   title: string;
   technologies: Technology[];
   summary: string;
-  details: string[];
+  details: string;
   reception: string;
   className?: string;
 }
@@ -70,9 +71,20 @@ const ProjectCard = ({
                 <Flex direction="col">
                   <h4 className="text-sm font-bold text-gray-600">DETAILS</h4>
                   <Flex direction="col" className="gap-3 px-2">
-                    {details.map((paragraph, i) => (
-                      <p key={`${id}-detailP-${i}`}>{paragraph}</p>
-                    ))}
+                    <Markdown
+                      components={{
+                        a(props) {
+                          return (
+                            <a
+                              className="text-blue-600 hover:text-blue-700 hover:underline"
+                              {...props}
+                            />
+                          );
+                        }
+                      }}
+                    >
+                      {details}
+                    </Markdown>
                   </Flex>
                 </Flex>
                 <Flex direction="col">
