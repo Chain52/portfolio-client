@@ -44,26 +44,28 @@ export const ProjectDetails = Object.freeze({
         Technologies.Figma
       ],
       summary:
-        'Collaborated with developers and architects on a serverless application. Owned the notification service and designed a database access layer using MongoDB and Mongoose and an event-driven API in AWS Lambda.',
+        'This notification microservice doubles as my first enterprise development opportunity and a crucial learning step that I build upon today. While continuing my role as a Project Manager and Technical Support Specialist, I took on the responsibility of creating a foundational notification microservice within a larger serverless application. I designed and implemented its event-driven API with AWS Lambda and a MongoDB/Mongoose data access layer, while simultaneously acting as a crucial bridge between user needs, sales objectives, and the technical team.',
       details: [
-        'Integrated Twilio to handle dynamic, personalized email and SMS communication. Deployed each operation as an isolated AWS Lambda function, enabling fine-grained observability, scalability, and maintainability. Charted event flows and documented handler triggers to improve clarity and support ongoing development.',
-        'Improved initially provided UX through adjustments in Figma based on client feedback. Prototyped those static UX designs for early user access testing.'
+        'My architecture of the messaging service was derived from an intensive study of core systems developed by other team members. Following their inspiration, I integrated Twilio for dynamic, personalized email and SMS delivery, as well as configured flexible message templates and deployed each notification operation as an isolated AWS Lambda function for fine-grained observability, independent scalability, and maintainability. I charted event flows and documented handler triggers to support future integration needs of the event-driven architecture.',
+        "Beyond the notification microservice, I served as a technical liaison, translating complex user pain points and sales targets into actionable design adjustments. I prototyped initial UX designs in Figma for demonstrations in sales pitches and focus groups, and improved upon them based on direct client feedback. This attention to user needs and demonstration of business acumen in the design phase directly addressed the industry's needs, helping to secure mobility-based tech contracts for the company."
       ],
       reception:
-        "Through my contributions to the UX prototype, the app's pitch outperformed competitors in securing mobility tech contracts. Focus groups praised the app's clarity and accessibility."
+        "Despite the development of the application being ceased due to funding reallocation, the notification microservice I built was functionally complete and demonstrated technical viability in personal testing. My mediary position in the project enabled me to work directly with user feedback and sales requirements in the UX design. My product demonstrations, combined with my in-depth knowledge of the platform, played a crucial role in securing mobility-based tech contracts. This opportunity was a pivotal learning experience that profoundly underscored the critical importance of meticulous code organization, robust testing beyond basic functionality, and clear architectural communication—lessons I rigorously apply to all development I've done since."
     },
     {
       id: 'salesforceDev',
       title: 'Salesforce Tooling/Optimization',
       technologies: [Technologies.Salesforce, Technologies.LWC],
       summary:
-        'Redesigned a legacy Salesforce codebase by introducing the modular patterns, a robust TTD framework, and operational tooling to improve maintainability and resilience.',
+        "Modernized and architecturally overhauled a 'nightmare' legacy Salesforce platform into a maintainable, resilient, and developer-friendly environment. This upgrade involved architecting and implementing modular design patterns within a Test-Driven Development (TDD) framework and paved the way for essential operational tooling that drastically improved system stability and developer efficiency.",
       details: [
-        'Utilized TTD to restructure the entire codebase to replace bad testing practices and implement reusability amongst similar components.',
-        'Built a Lightning Web Component mass transfer tool that enabled supervisors to independently draft, preview, and execute ownership transfers without support intervention. Real-time metrics and rollback capabilities improved trust and usability.'
+        "Faced with a severely neglected and poorly designed Salesforce environment, referred to as the 'nightmare environment' within the development team, I conducted a comprehensive diagnosis that led to the decision that a total refactor was necessary to establish best practices and ensure long-term maintainability.",
+        'TODO: FIX LINK BY IMPLEMENTING MARKDOWN FILES AS CONTENT RENDERS',
+        "Inspired by advanced Apex development principles in James Simone's '<a href='https://www.jamessimone.net/blog/joys-of-apex' target='_blank' className='text-blue-600 hover:text-blue-700 hover:underline'>The Joys of Apex</a>', I designed and implemented a robust TDD framework across the entire codebase and introduced modular patterns, such as factories, repositories, and dependency injection, to replace the unstable legacy code with reusable and highly testable components. With this foundation in a quality, resilient system laid, I developed reusable constructs for commonly used Salesforce modules, most notably a streamlined batch job and trigger handler framework, which drastically simplified development and increased maintainability.",
+        'Beyond the core refactor, I developed a Lightning Web Component (LWC) mass transfer tool to grant transaction autonomy to supervisors. This user-friendly application empowered supervisors to independently draft, preview, and execute large-scale ownership transfers without any technical support intervention. The tool included real-time metrics and robust rollback capabilities, fundamentally improving data integrity, user trust, and operational efficiency within the Salesforce ecosystem.'
       ],
       reception:
-        'The refactor transformed the Salesforce environment from an internal bottleneck, referred to a "nightmare project," into a flexible and testable platform.'
+        "The Salesforce environment was transformed from an internal bottleneck, the 'nightmare environment', into a flexible, resilient, and highly testable platform. The newfound access to rapid and confident deployment of new features, along with improved developer velocity, significantly reduced technical debt. Finally, the implemented mass transfer tool specifically eliminated dozens of hours of manual support intervention monthly, directly empowering supervisors and enhancing operational autonomy across the organization."
     }
   ]
 });
