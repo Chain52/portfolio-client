@@ -1,6 +1,5 @@
 {
-  "name": "portfolio",
-  "private": true,
+  "name": "portfolio-client",
   "type": "module",
   "scripts": {
     "build": "react-router build",
